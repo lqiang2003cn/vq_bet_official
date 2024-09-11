@@ -14,7 +14,8 @@ import wandb
 from video import VideoRecorder
 import pickle
 
-config_name = "train_ant_goalcond"
+# config_name = "train_ant_goalcond"
+config_name="train_kitchen_goalcond"
 
 if "MUJOCO_GL" not in os.environ:
     os.environ["MUJOCO_GL"] = "egl"
@@ -51,12 +52,13 @@ def main(cfg):
     )
     env = hydra.utils.instantiate(cfg.env.gym)
     goal_fn = hydra.utils.instantiate(cfg.goal_fn)
-    run = wandb.init(
-        project=cfg.wandb.project,
-        entity=cfg.wandb.entity,
-        config=OmegaConf.to_container(cfg, resolve=True),
-    )
-    run_name = run.name or "Offline"
+    # run = wandb.init(
+    #     project=cfg.wandb.project,
+    #     entity=cfg.wandb.entity,
+    #     config=OmegaConf.to_container(cfg, resolve=True),
+    # )
+    # run_name = run.name or "Offline"
+    run_name = "Offline"
     save_path = Path(cfg.save_path) / run_name
     save_path.mkdir(parents=True, exist_ok=False)
     video = VideoRecorder(dir_name=save_path)

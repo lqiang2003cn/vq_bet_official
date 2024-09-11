@@ -1,7 +1,7 @@
 
 # TODO fill these out
-dataset_path: PATH_TO_YOUR_[env_name]_DATASET # (i.e. /home/user/vqbet/vqbet_datasets_for_release)
-save_path: YOUR_SAVE_PATH # (i.e. /home/user/vq-bet)
+dataset_path: /home/ubuntu/PycharmProjects/vq_bet_official/vqbet_datasets_for_release # (i.e. /home/user/vqbet/vqbet_datasets_for_release)
+save_path: /home/ubuntu/PycharmProjects/vq_bet_official/save # (i.e. /home/user/vq-bet)
 wandb_entity: YOUR_WANDB_ENTITY
 
 datasets:

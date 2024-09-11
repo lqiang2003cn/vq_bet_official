@@ -15,7 +15,7 @@ num_final_evals: 20
 num_final_eval_per_goal: 5
 action_window_size: 1
 sequentially_select: false
-vqvae_load_dir: "YOUR_PATH_TO_PRETRAINED_VQVAE/trained_vqvae.pt"
+vqvae_load_dir: "/home/ubuntu/PycharmProjects/vq_bet_official/save/checkpoints/AntMazeMultimodal-eval-v0/2024-09-11/16-16-09/Offline/trained_vqvae.pt"
 goal_dim: 41
 
 wandb:
