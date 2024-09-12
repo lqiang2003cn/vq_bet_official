@@ -2,7 +2,7 @@
 # TODO fill these out
 dataset_path: /home/ubuntu/PycharmProjects/vq_bet_official/vqbet_datasets_for_release # (i.e. /home/user/vqbet/vqbet_datasets_for_release)
 save_path: /home/ubuntu/PycharmProjects/vq_bet_official/save # (i.e. /home/user/vq-bet)
-wandb_entity: YOUR_WANDB_ENTITY
+wandb_entity: "f2054dfdc50495470a649ee70327ab047e161fd9"
 
 datasets:
     ant: ${env_vars.dataset_path}/ant

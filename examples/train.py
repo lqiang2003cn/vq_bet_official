@@ -52,13 +52,12 @@ def main(cfg):
     )
     env = hydra.utils.instantiate(cfg.env.gym)
     goal_fn = hydra.utils.instantiate(cfg.goal_fn)
-    # run = wandb.init(
-    #     project=cfg.wandb.project,
-    #     entity=cfg.wandb.entity,
-    #     config=OmegaConf.to_container(cfg, resolve=True),
-    # )
-    # run_name = run.name or "Offline"
-    run_name = "Offline"
+    run = wandb.init(
+        project=cfg.wandb.project,
+        # entity=cfg.wandb.entity,
+        config=OmegaConf.to_container(cfg, resolve=True),
+    )
+    run_name = run.name or "Offline"
     save_path = Path(cfg.save_path) / run_name
     save_path.mkdir(parents=True, exist_ok=False)
     video = VideoRecorder(dir_name=save_path)
